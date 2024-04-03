@@ -1,0 +1,16 @@
+==1440== Memcheck, a memory error detector
+==1440== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1440== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1440== Command: ./functional
+==1440== Parent PID: 1355
+==1440== 
+==1440== error calling PR_SET_PTRACER, vgdb might block
+==1440== 
+==1440== HEAP SUMMARY:
+==1440==     in use at exit: 0 bytes in 0 blocks
+==1440==   total heap usage: 10 allocs, 10 frees, 8,952 bytes allocated
+==1440== 
+==1440== All heap blocks were freed -- no leaks are possible
+==1440== 
+==1440== For lists of detected and suppressed errors, rerun with: -s
+==1440== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

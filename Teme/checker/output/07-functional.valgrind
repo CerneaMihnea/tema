@@ -1,0 +1,40 @@
+==1438== Memcheck, a memory error detector
+==1438== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1438== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1438== Command: ./functional
+==1438== Parent PID: 1355
+==1438== 
+==1438== error calling PR_SET_PTRACER, vgdb might block
+==1438== Invalid read of size 4
+==1438==    at 0x10B77C: reverse_elem (tasks.c:12)
+==1438==    by 0x10959B: for_each (functional.c:13)
+==1438==    by 0x10B7CE: reverse (tasks.c:20)
+==1438==    by 0x10B214: test_reverse (tests.c:313)
+==1438==    by 0x109512: main (main.c:74)
+==1438==  Address 0x4a8e158 is 0 bytes after a block of size 40 alloc'd
+==1438==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1438==    by 0x10A0F7: create_array (tests.c:15)
+==1438==    by 0x10B1DB: test_reverse (tests.c:308)
+==1438==    by 0x109512: main (main.c:74)
+==1438== 
+==1438== Invalid write of size 4
+==1438==    at 0x10B792: reverse_elem (tasks.c:13)
+==1438==    by 0x10959B: for_each (functional.c:13)
+==1438==    by 0x10B7CE: reverse (tasks.c:20)
+==1438==    by 0x10B214: test_reverse (tests.c:313)
+==1438==    by 0x109512: main (main.c:74)
+==1438==  Address 0x4a8e158 is 0 bytes after a block of size 40 alloc'd
+==1438==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1438==    by 0x10A0F7: create_array (tests.c:15)
+==1438==    by 0x10B1DB: test_reverse (tests.c:308)
+==1438==    by 0x109512: main (main.c:74)
+==1438== 
+==1438== 
+==1438== HEAP SUMMARY:
+==1438==     in use at exit: 0 bytes in 0 blocks
+==1438==   total heap usage: 14 allocs, 14 frees, 8,372 bytes allocated
+==1438== 
+==1438== All heap blocks were freed -- no leaks are possible
+==1438== 
+==1438== For lists of detected and suppressed errors, rerun with: -s
+==1438== ERROR SUMMARY: 8 errors from 2 contexts (suppressed: 0 from 0)
