@@ -161,7 +161,7 @@ void test_for_each(void)
 
 	// Then
 	for_each(write_int, list);
-
+	
 	// Cleanup
 	free(list.data);
 }
